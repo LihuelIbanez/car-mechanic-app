@@ -15,7 +15,7 @@ return <String, WidgetBuilder>{
     'cars'        : (BuildContext context) => const Cars(),
     'clients'     : (BuildContext context) => const Clients(),
     'clients list': (BuildContext context) => const ClientsList(),
-    'clients new' : (BuildContext context) => ClientNew(),
+    'clients new' : (BuildContext context) => const ClientNew(),
     'progress'    : (BuildContext context) => const Progress(),
     'payments'    : (BuildContext context) => const Payments(),
     'services'    : (BuildContext context) => const Services(),

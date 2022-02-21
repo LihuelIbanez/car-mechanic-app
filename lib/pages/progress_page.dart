@@ -1,3 +1,4 @@
+import 'package:carsapp/src/widgets/container.dart';
 import 'package:flutter/material.dart';
 
 class Progress extends StatelessWidget {
@@ -11,7 +12,8 @@ class Progress extends StatelessWidget {
         child:Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            CustumContainer(
+              color: Colors.black,
               
             ),
           ],
@@ -19,4 +21,4 @@ class Progress extends StatelessWidget {
 
     );
   }
-}
+} 

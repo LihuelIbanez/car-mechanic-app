@@ -13,10 +13,12 @@ class Clients extends StatelessWidget {
           children: [
             const _TitleName(firstname: 'Lihuel', lastname: 'Ibañez'),
             const _DataBody(
-                id: '38756451',
+                id: 38756451,
                 email: 'sherlock305@gmail.com',
                 city: 'Mendoza, Mendoza',
-                adress: 'Santa fe 878548'),
+                adress: 'Santa fe 878548',
+                phone: 2994150686,
+                ),
             _CarsList(),
           ],
         ),
@@ -60,13 +62,19 @@ class _TitleName extends StatelessWidget {
 }
 
 class _DataBody extends StatelessWidget {
-  final String id, email, adress, city;
+  final int id;
+  final String email;
+  final String adress;
+  final String city;
+  final int phone;
 
   const _DataBody(
       {required this.id,
       required this.email,
       required this.adress,
-      required this.city});
+      required this.city,
+      required this.phone,
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +89,10 @@ class _DataBody extends StatelessWidget {
         children: [
           Row(
             children: [
+              Text(
+                'Phone Number: $phone',
+                style: styleSubtile2,
+              ),
               const Expanded(child: SizedBox()),
               _Edit(),
             ],
@@ -110,7 +122,8 @@ class _DataBody extends StatelessWidget {
                 style: styleSubtile2,
               ),
             ],
-          )
+          ),
+              
         ],
       ),
     );
@@ -128,14 +141,17 @@ class _CarsList extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Text(
-              'Cars List',
-              style: styleTitulo2,
+            Row(
+              children: [
+                Text(
+                  'Cars List',
+                  style: styleTitulo2,
+                ),
+                const Expanded(child: SizedBox()),
+                TextButton(onPressed: () {}, child: Text('PLUS',style: styleSubtile1,)),
+                TextButton(onPressed: () {}, child: Text('DELETE',style: styleSubtile1,)),
+              ],
             ),
-            const _CarsItem(
-                model: 'Lancer', maker: 'Mitsubishi', patente: 'asdf 305'),
-            const _CarsItem(
-                model: 'Lancer', maker: 'Mitsubishi', patente: 'asdf 305'),
             const _CarsItem(
                 model: 'Lancer', maker: 'Mitsubishi', patente: 'asdf 305'),
           ],

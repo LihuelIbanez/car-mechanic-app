@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:carsapp/src/utils/fonts.dart';
+import 'package:carsapp/src/widgets/container.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -49,7 +50,7 @@ class SplashScreenState extends State<SplashScreen>
         gradient: LinearGradient(
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
-            colors: [Colors.white])),
+            colors: [Colors.black,Colors.black,Colors.black,Colors.black])),
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
@@ -58,12 +59,21 @@ class SplashScreenState extends State<SplashScreen>
               mainAxisSize: MainAxisSize.min, 
               children: <Widget>[
                 Padding(padding: const EdgeInsets.only(bottom: 30.0),child:
-            Text('GO', style: styleSubtile2))
+            Text('GO', style: styleSubtile1))
               ],),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('GO', style: styleTitulo1,),
+                CustumContainer(
+                  radius: 20,
+                  color: Colors.yellow,
+                  height: animation.value * 250,
+                  width: animation.value * 250,
+                  child: Center(
+                    child: Text('GO',
+                    textScaleFactor: animation.value * 3,
+                    style: styleTitulo1,),
+                  )),
               ],
             ),
           ],

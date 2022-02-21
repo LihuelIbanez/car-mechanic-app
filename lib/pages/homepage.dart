@@ -46,7 +46,7 @@ class Homepage extends StatelessWidget {
               miliseconds: 400,
             ),
             const _Items(
-              itemname: 'In-Progess',
+              itemname: 'In-Progress',
               icons: Icons.work,
               route: '/',
               miliseconds: 600,
@@ -54,7 +54,7 @@ class Homepage extends StatelessWidget {
             const _Items(
               itemname: 'Payments',
               icons: Icons.credit_card,
-              route: '/',
+              route: 'SplashScreen',
               miliseconds: 800,
             ),
           ],

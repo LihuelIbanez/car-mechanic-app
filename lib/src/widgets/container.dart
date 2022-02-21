@@ -9,6 +9,8 @@ class CustumContainer extends StatelessWidget {
   final double? paddingvertical;
   final double? radius;
   final double? borderwith;
+  final double? height;
+  final double? width;
   final Color? color;
   final Color? bordercolor;
   final Widget? child;
@@ -24,11 +26,15 @@ class CustumContainer extends StatelessWidget {
     this.bordercolor,
     this.borderwith,
     this.child,
+    this.height,
+    this.width,
     }): super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: width,
+      height: height,
       margin: EdgeInsets.symmetric(horizontal: marginhorizontal ?? 0.0, vertical: marginvertical ?? 0.0,),
       padding: EdgeInsets.symmetric(horizontal: paddinghorizontal ?? 0.0, vertical: paddingvertical ?? 0.0,),
       decoration: BoxDecoration(
